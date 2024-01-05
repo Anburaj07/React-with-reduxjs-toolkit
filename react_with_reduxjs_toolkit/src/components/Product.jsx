@@ -8,6 +8,7 @@ const Product = ({ id, name, price }) => {
       <p>Name: {name}</p>
       <p>Price: {price}</p>
       <div>
+        <button>+</button>
         <button> Delete</button>
         <button> Edit</button>
       </div>
@@ -22,5 +23,6 @@ const PRODUCT = styled.div`
   padding: 10px;
   div {
     display: flex;
+    gap: 4px;
   }
 `;
