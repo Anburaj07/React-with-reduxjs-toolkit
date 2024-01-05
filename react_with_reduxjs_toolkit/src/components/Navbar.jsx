@@ -16,7 +16,7 @@ const Navbar = () => {
     <DIV>
       <div>
         <h2 onClick={()=>naviagte("/")}>Flipkart</h2>
-        <button onClick={()=>naviagte("/add")}>Create Product</button>
+        <button onClick={()=>naviagte("/add")}>Create Product+</button>
       </div>
       <div>
         <h4>Cart {cartProducts.length}</h4>
@@ -28,9 +28,25 @@ const Navbar = () => {
 
 export default Navbar;
 const DIV = styled.div`
-  border: 2px solid blue;
+  /* border-bottom: 2px solid blue; */
+  background-color: #0093E9;
+background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1%;
+  padding: 10px;
+  div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  h2,h4{
+    color: #ae0d9c;
+  }
+  button{
+    background: none;
+    color: #0e0d0d;
+  }
 `;

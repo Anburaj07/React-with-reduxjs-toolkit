@@ -7,8 +7,7 @@ const Products = () => {
   const { data: productList, isLoading, isSuccess } = useGetProductsQuery();
   return (
     <div>
-      <h1>Products List</h1>
-      {isLoading}
+      <h2 style={{color:"#8f1280",textAlign:"center"}}>Products List</h2>
       <WRAPPER>
         {isLoading && <h1>Loading...</h1>}
         {productList?.map((product) => (
@@ -27,5 +26,8 @@ const WRAPPER = styled.div`
   gap: 20px;
   flex-wrap: wrap;
   padding: 10px;
-  /* border: 1px solid black; */
+  padding-bottom: 140px;
+  h1{
+    color: rosybrown;
+  }
 `;

@@ -85,17 +85,27 @@ const AddProduct = () => {
 export default AddProduct;
 
 const DIV = styled.div`
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   padding: 2%;
   margin-top: 30px;
+  padding-bottom: 250px;
   form {
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #fbe7e7;
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
+    align-items:center;
     gap: 20px;
     input {
       background-color: white;
       color: black;
       margin-left: 10px;
+    }
+    label{
+        font-weight: 500;
     }
   }
 `;

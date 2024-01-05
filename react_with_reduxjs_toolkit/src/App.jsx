@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import "./App.css";
+// import "./App.css";
 import AllRoutes from "./components/AllRoutes";
 import Navbar from "./components/Navbar";
 
@@ -16,4 +16,8 @@ export default App;
 
 const DIV = styled.div`
   width: 100%;
+  background-color: #74EBD5;
+background-image: linear-gradient(90deg, #74EBD5 0%, #9FACE6 100%);
+
+
 `;

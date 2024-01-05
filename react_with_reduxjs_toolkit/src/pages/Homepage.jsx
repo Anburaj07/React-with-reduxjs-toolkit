@@ -13,4 +13,5 @@ const Homepage = () => {
 
 export default Homepage;
 
-const DIV = styled.div``;
+const DIV = styled.div`
+`;
