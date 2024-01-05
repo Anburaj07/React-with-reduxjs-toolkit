@@ -16,8 +16,6 @@ export default App;
 
 const DIV = styled.div`
   width: 100%;
-  background-color: #74EBD5;
-background-image: linear-gradient(90deg, #74EBD5 0%, #9FACE6 100%);
-
-
+  background-color: #74ebd5;
+  background-image: linear-gradient(90deg, #74ebd5 0%, #9face6 100%);
 `;
