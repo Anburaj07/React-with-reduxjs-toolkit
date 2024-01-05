@@ -1,14 +1,19 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import styled from "styled-components";
+import { addProduct } from "../redux/slices/cartSlice";
 
 const Product = ({ id, name, price }) => {
+    const dispatch=useDispatch();
+    const handleAddProduct=(name)=>{
+        dispatch(addProduct(name))
+    }
   return (
     <PRODUCT>
-      <p>ID: {id}</p>
       <p>Name: {name}</p>
       <p>Price: {price}</p>
       <div>
-        <button>+</button>
+        <button onClick={()=>handleAddProduct(name)}>Add to Cart</button>
         <button> Delete</button>
         <button> Edit</button>
       </div>

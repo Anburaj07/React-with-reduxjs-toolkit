@@ -27,5 +27,9 @@ export default Products;
 
 const WRAPPER = styled.div`
   display: flex;
+  justify-content: space-around;
   gap: 20px;
+  flex-wrap: wrap;
+  padding: 10px;
+  /* border: 1px solid black; */
 `;

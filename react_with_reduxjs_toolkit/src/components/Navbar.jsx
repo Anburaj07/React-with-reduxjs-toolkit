@@ -1,11 +1,22 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
+import { clearCart } from "../redux/slices/cartSlice";
 
 const Navbar = () => {
+  const cartProducts = useSelector((store) => store.cart.products);
+  console.log("cartProducts:", cartProducts);
+  const dispatch = useDispatch();
+  const clearCartProducts = () => {
+    dispatch(clearCart());
+  };
   return (
     <DIV>
       <h1>Flipkart</h1>
-      <h4>Cart 0</h4>
+      <div>
+        <h4>Cart {cartProducts.length}</h4>
+        <button onClick={clearCartProducts}>cleart cart</button>
+      </div>
     </DIV>
   );
 };
