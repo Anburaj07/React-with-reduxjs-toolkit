@@ -1,22 +1,18 @@
 import React from "react";
 import Product from "./Product";
 import styled from "styled-components";
-
-const productList = [
-  { id: 1, name: "shirt", price: 250 },
-  { id: 2, name: "shoe", price: 245 },
-  { id: 3, name: "pant", price: 251 },
-  { id: 4, name: "t-shirt", price: 215 },
-  { id: 5, name: "heatset", price: 125 },
-];
+import { useGetProductsQuery } from "../redux/slices/productApi";
 
 const Products = () => {
+  const { data: productList, isLoading, isSuccess } = useGetProductsQuery();
   return (
     <div>
-        <h1>Products List</h1>
+      <h1>Products List</h1>
+      {isLoading}
       <WRAPPER>
-        {productList.map((product) => (
-          <Product key={product.id} {...product}  />
+        {isLoading && <h1>Loading...</h1>}
+        {productList?.map((product) => (
+          <Product key={product.id} {...product} />
         ))}
       </WRAPPER>
     </div>

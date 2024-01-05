@@ -6,7 +6,6 @@ import Navbar from "../components/Navbar";
 const Homepage = () => {
   return (
     <DIV>
-      <Navbar />
       <Products />
     </DIV>
   );
