@@ -5,38 +5,38 @@ export const productApi = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: "https://65967cfd6bb4ec36ca02b8c6.mockapi.io/",
   }),
-  tagTypes: ["Products"],
+  tagTypes: ["employees"],
   endpoints: (builder) => ({
     getProducts: builder.query({
-      query: () => "/products",
-      providesTags: ["Products"],
+      query: () => "/employees",
+      providesTags: ["employees"],
     }),
     getProductById: builder.query({
-      query: (id) => `/products/${id}`,
-      providesTags: ["Products"],
+      query: (id) => `/employees/${id}`,
+      providesTags: ["employees"],
     }),
     addProduct: builder.mutation({
       query: (product) => ({
-        url: "/products",
+        url: "/employees",
         method: "POST",
         body: product,
       }),
-      invalidatesTags: ["Products"],
+      invalidatesTags: ["employees"],
     }),
     deleteProduct: builder.mutation({
       query: (id) => ({
-        url: `/products/${id}`,
+        url: `/employees/${id}`,
         method: "DELETE",
       }),
-      invalidatesTags: ["Products"],
+      invalidatesTags: ["employees"],
     }),
     editProduct: builder.mutation({
       query: ({ id, ...product }) => ({
-        url: `/products/${id}`,
+        url: `/employees/${id}`,
         method: "PUT",
         body: product,
       }),
-      invalidatesTags: ["Products"],
+      invalidatesTags: ["employees"],
     }),
   }),
 });

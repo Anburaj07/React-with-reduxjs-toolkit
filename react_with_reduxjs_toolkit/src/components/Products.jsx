@@ -30,4 +30,7 @@ const WRAPPER = styled.div`
   h1{
     color: rosybrown;
   }
+  div:hover{
+    cursor: move;
+  }
 `;

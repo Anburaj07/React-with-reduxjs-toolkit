@@ -17,7 +17,7 @@ const AddProduct = () => {
   const [isEditing, setIsEditing] = useState(false);
   const { id } = useParams();
   const { data } = useGetProductByIdQuery(id);
-  const [editProduct]=useEditProductMutation()
+  const [editProduct] = useEditProductMutation();
 
   useEffect(() => {
     if (id) {
@@ -47,7 +47,7 @@ const AddProduct = () => {
     e.preventDefault();
     console.log(product);
     if (isEditing) {
-        editProduct(product)
+      editProduct(product);
       alert("Product Updated successfully!");
     } else {
       addProduct(product);
@@ -97,15 +97,15 @@ const DIV = styled.div`
     border-radius: 15px;
     display: flex;
     flex-direction: column;
-    align-items:center;
+    align-items: center;
     gap: 20px;
     input {
       background-color: white;
       color: black;
       margin-left: 10px;
     }
-    label{
-        font-weight: 500;
+    label {
+      font-weight: 500;
     }
   }
 `;
