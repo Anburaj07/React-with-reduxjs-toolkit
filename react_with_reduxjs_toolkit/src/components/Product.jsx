@@ -10,6 +10,7 @@ const Product = ({ id, name, price }) => {
   const navigate = useNavigate();
   const [deleteProduct] = useDeleteProductMutation();
 
+  //for cart
   const handleAddProduct = (name) => {
     dispatch(addProduct(name));
   };
